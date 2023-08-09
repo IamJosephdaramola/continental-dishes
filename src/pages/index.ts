@@ -1,2 +1,3 @@
 export { Home } from './home';
-export { NotFound } from './not-found';
+export { ErrorBoundary } from './error-boundary';
+export { RecipeDetails } from './recipe-details';
