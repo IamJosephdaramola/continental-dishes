@@ -1,1 +1,1 @@
-export type { ComplexSearch, RecipeInformation } from './all-recipes';
+export type { ComplexSearch, RecipeInformation, Recipe } from './all-recipes';

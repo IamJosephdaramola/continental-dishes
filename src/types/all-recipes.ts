@@ -3,6 +3,7 @@ interface Recipe {
     image: string;
     imageType: string;
     title: string;
+    readyInMinutes: number;
 }
 
 interface ComplexSearch {
@@ -14,4 +15,4 @@ interface ComplexSearch {
 
 interface RecipeInformation extends Recipe {}
 
-export type { ComplexSearch, RecipeInformation };
+export type { ComplexSearch, RecipeInformation, Recipe };

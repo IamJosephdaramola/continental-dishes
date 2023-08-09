@@ -15,7 +15,7 @@ const recipeApi = createApi({
     endpoints: (builder) => ({
         getRecipes: builder.query<ComplexSearch, Params>({
             query: ({ query, offset = 0, number }) => ({
-                url: `complexSearch?query=${query}&offset=${offset}&number=${number}&apiKey=${key}`,
+                url: `complexSearch?query=${query}&offset=${offset}&number=${number}&addRecipeInformation=true&apiKey=${key}`,
             }),
         }),
         getRecipe: builder.query<RecipeInformation, string>({

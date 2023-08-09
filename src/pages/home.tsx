@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react';
 import { useGetRecipesQuery } from '../store';
-import { Link } from 'react-router-dom';
+import { RecipeCard } from '../components';
 
 const Home = () => {
     const [number, setNumber] = useState(10);
@@ -24,20 +24,16 @@ const Home = () => {
                 </label>
                 <button type="submit">submit</button>
             </form>
-            <div>
-                <div>
-                    {data?.results.map((recipe) => (
-                        <h2 key={recipe.id}>
-                            <Link to={`/recipes/${recipe.id}`}>{recipe.title}</Link>
-                        </h2>
-                    ))}
+            <main className="container mx-auto">
+                <div className="flex flex-wrap gap-5 w-full justify-center lg:justify-start">
+                    {data?.results.map((recipe) => <RecipeCard key={recipe.id} {...recipe} />)}
                 </div>
                 {isLoading ? (
                     <span>loading...</span>
                 ) : (
                     <button onClick={() => setNumber((prev) => prev + 10)}>Next</button>
                 )}
-            </div>
+            </main>
         </div>
     );
 };
