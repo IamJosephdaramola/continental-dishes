@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import { IoIosArrowForward } from 'react-icons/io';
 import { RecipeTime } from './recipe-time';
-import { convertTimeToHourAndMinutes, getHourString } from '../utils';
-import type { Recipe } from '../types';
+import { convertTimeToHourAndMinutes, getHourString } from '../../utils';
+import type { Recipe } from '../../types';
 
 const RecipeCard = ({ id, title, image, readyInMinutes }: Recipe) => {
     const { hour, minutes } = convertTimeToHourAndMinutes(readyInMinutes);
