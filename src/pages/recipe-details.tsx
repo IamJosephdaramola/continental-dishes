@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 import { IoIosArrowForward } from 'react-icons/io';
 import { useGetRecipeQuery } from '../store';
 
