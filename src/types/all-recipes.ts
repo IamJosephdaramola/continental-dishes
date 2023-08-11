@@ -1,7 +1,6 @@
 interface Recipe {
     id: number;
     image: string;
-    imageType: string;
     title: string;
     readyInMinutes: number;
 }
@@ -13,6 +12,21 @@ interface ComplexSearch {
     totalResults: number;
 }
 
-interface RecipeInformation extends Recipe {}
+interface AnalyzedInstruction {
+    name: string;
+    steps: Array<{
+        number: number;
+        step: string;
+    }>;
+}
+
+interface RecipeInformation extends Recipe {
+    aggregateLikes: number;
+    analyzedInstructions: AnalyzedInstruction[];
+    instructions: string;
+    sourceUrl: string;
+    spoonacularSourceUrl: string;
+    summary: string;
+}
 
 export type { ComplexSearch, RecipeInformation, Recipe };

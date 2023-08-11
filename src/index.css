@@ -16,3 +16,12 @@
 .recipe-card:hover  .go-to-icon {
 animation: moveLeftRight 1s infinite forwards;
 }
+
+.cms-content {
+position: relative;
+}
+
+.cms-content a {
+  text-decoration: underline;
+font-style: italic;
+}

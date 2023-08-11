@@ -1,6 +1,6 @@
 import { RecipeCardPlaceholder } from './recipe-card-placeholder';
 
-const length = 10;
+const length = 20;
 const arr = new Array(length).fill(0);
 
 const RecipePlaceholderContainer = () => {
